@@ -1,0 +1,76 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(15px);
+  z-index: 1;
+}
+.header-container {
+  margin: 0 auto;
+  padding: 20px 20px;
+  max-width: 1000px;
+}
+.logo-mobile {
+  display: none;
+}
+.logo-img {
+  width: 150px;
+  height: 50px;
+}
+.logo-mobile button {
+  all: unset;
+  cursor: pointer;
+}
+.button-img {
+  height: 30px;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.navigation li {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  transition: color 0.5s;
+}
+.navigation li:hover {
+  color: #3498db;
+}
+.open {
+  display: block;
+  background-image: url('/hologram-bg.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: 50% 50%;
+}
+
+@media (max-width: 700px) {
+  .header-container {
+    padding: 20px 40px;
+  }
+  .logo-mobile {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav {
+    display: none;
+  }
+  .navigation {
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    height: 80vh;
+    list-style: none;
+  }
+  .navigation li {
+    font-size: 30px;
+  }
+  .logo-desktop {
+    display: none;
+  }
+}

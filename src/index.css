@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 25%,
+    rgba(16, 16, 89, 1) 72%,
+    rgba(27, 39, 140, 1) 100%
+  );
+}
+html, body {
+  overflow-x: hidden;
+}

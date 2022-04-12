@@ -1,0 +1,123 @@
+.showcase__section {
+  position: relative;
+  padding: 10px 20px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.showcase__container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10px;
+  gap: 35px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.showcase__container h1 {
+  font-size: clamp(40px, 10vw, 90px);
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 100%;
+  color: white;
+}
+.showcase__container p {
+  text-align: justify;
+  font-size: clamp(15px, 2vw, 20px);
+  color: white;
+}
+
+.showcase__container img {
+  cursor: pointer;
+  width: 160px;
+  height: 50px;
+}
+.buttons {
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+  gap: clamp(18px, 2vw, 20px);
+}
+.phone-image img {
+  position: absolute;
+  right: 150px;
+  top: -50px;
+  width: 500px;
+  height: 900px;
+  z-index: 1;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 1257px) {
+  .phone-image img {
+    right: -20px;
+  }
+}
+
+@media (max-width: 1148px) {
+  .showcase__section {
+    background-size: 60vw;
+    background-position: 120% 50%;
+  }
+  .phone-image img {
+    top: 50px;
+    right: 20px;
+    width: 400px;
+    height: 700px;
+  }
+}
+
+@media (max-width: 980px) {
+  .phone-image img {
+    top: 150px;
+    right: 20px;
+    width: 300px;
+    height: 550px;
+    z-index: -1;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .phone-image img {
+    right: -50px;
+    width: 250px;
+    height: 450px;
+  }
+  .showcase__container p {
+    width: 200px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+  }
+}
+@media (max-width: 400px) {
+  .showcase__container p {
+    width: 150px;
+  }
+  .showcase__container img {
+    width: 130px;
+    height: 40px;
+  }
+  .phone-image img {
+    right: -30px;
+    width: 250px;
+    height: 450px;
+  }
+}

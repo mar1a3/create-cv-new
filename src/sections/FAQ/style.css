@@ -1,0 +1,20 @@
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px 20px;
+}
+.faq-title {
+  text-align: center;
+}
+.faq-title h3 {
+  font-size: clamp(20px, 5vw, 35px);
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.questions {
+  display: flex;
+  gap: 28px;
+}
