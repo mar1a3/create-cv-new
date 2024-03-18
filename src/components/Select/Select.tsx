@@ -13,7 +13,7 @@ const handleChange = (value: string) => {
   console.log(`selected ${value}`);
 };
 
-export const UserSelect: React.FC<SelectProps> = ({ options, title }) => {
+export const DataSelect: React.FC<SelectProps> = ({ options, title }) => {
   return (
     <SelectWraper>
       <p>{title}</p>

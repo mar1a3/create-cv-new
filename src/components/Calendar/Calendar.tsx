@@ -4,7 +4,7 @@ import { DatePicker } from 'antd';
 import { CalendarWrapper } from './style';
 
 
-interface CalendarProps {
+interface CalendarWidgetProps {
     title?: string;
     placeholder?: string;
 }
@@ -13,7 +13,7 @@ const onChange: DatePickerProps['onChange'] = (date, dateString) => {
     console.log(date, dateString);
 };
 
-export const UserCalendar: React.FC<CalendarProps> = ({ title, placeholder }) => (
+export const CalendarWidget: React.FC<CalendarWidgetProps> = ({ title, placeholder }) => (
     <>
         <CalendarWrapper>
             <p>{title}</p>

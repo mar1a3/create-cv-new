@@ -24,7 +24,7 @@ const beforeUpload = (file: FileType) => {
 };
 
 
-export const UserUpload: React.FC = () => {
+export const FileUploader: React.FC = () => {
     const [loading, setLoading] = useState(false);
     const [imageUrl, setImageUrl] = useState<string>();
 

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Paper from '../../assets/tornPaper1.2.png';
 
+export{};
+
 export const HeaderWrapper = styled.div`
   font-family: "Belanosima", sans-serif;
   margin: 0 auto;

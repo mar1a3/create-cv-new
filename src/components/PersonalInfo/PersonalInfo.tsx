@@ -1,18 +1,25 @@
 import React from 'react';
-import { MainCard } from '../Card/Card';
-import { UserInput } from '../Input/Input';
-import { UserCalendar } from '../Calendar/Calendar';
-import { UserUpload } from '../Upload/Upload';
+import { InfoCard } from '../Card/Card';
+import { FormControl } from '../FormControl/FormControl';
+import { FormField } from '../Input/Input';
+import { CalendarWidget } from '../Calendar/Calendar';
+import { FileUploader } from '../Upload/Upload';
 
 
 export const PersonalInfo = () => {
     return (
-        <MainCard title="Персональная инфомация">
-            <UserInput label="Фио" placeholder="Фио" />
-            <UserInput label="Место жительства" placeholder="Место жительства" />
-            <UserInput label="Номер телефона" placeholder="Номер телефона" />
-            <UserCalendar title="Дата рождения" placeholder="Дата рождения" />
-            <UserUpload />
-        </MainCard>
+        <InfoCard title="Персональная инфомация">
+            <FormControl label="Фио" >
+                <FormField label="Фио" placeholder="Фио" />
+            </FormControl>
+            <FormControl label="Место жительства">
+                <FormField label="Место жительства" placeholder="Место жительства" />
+            </FormControl>
+            <FormControl label="Номер телефона">
+                <FormField label="Фио" placeholder="Фио" />
+            </FormControl>
+            <CalendarWidget title="Дата рождения" placeholder="Дата рождения" />
+            <FileUploader />
+        </InfoCard>
     )
 }
