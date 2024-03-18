@@ -1,67 +1,37 @@
 import React from 'react';
-import { keyframes, styled } from 'styled-components';
-import Hologram from '../../assets/hologram.jpg';
+import { styled, createGlobalStyle } from 'styled-components';
+import Paper from '../../assets/tornPaper1.2.png'
 
-const beforeRotation = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(359deg);
-  }
+export const HeaderFont = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap');
 `
-const BackgroundAnimated = keyframes`
-  from {
-      background-position: 0 0
-  }
-  to {
-      background-position: 100% 0
-  }
 
-`
-const HeaderElement = styled.div`
-  font-family: "Sedgwick Ave Display", sans-serif;
-  margin-left: 100px;
-  height: 200px;
+const HeaderWrapper = styled.div`
+  font-family: "Belanosima", sans-serif;
+  margin: 0 auto;
+  padding:20px 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  
-  &:before{
-    content: "";
-    position: absolute;
-    top: 70px;
-    width: 300px;
-    height: 300px;
-    filter: blur(50px);
-    background-image: linear-gradient(#4ddc9e, #876df2, #f93a86);
-    /* animation: ${beforeRotation} 5s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite; */
-    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
-    z-index: -1;
+  flex-direction:column;
+  justify-content:center;
+  width: 1000px;
+  height: 200px;
+  background-image:url(${Paper});
+  background-position:0px -50px;
+  border-radius: 0px 0px 20px 20px;
+  & h1{
+    font-size: 45px;
+    font-weight: 600;
+    color:#424242;
   }
-`
-const H1Element = styled.h1`
-  background: url(${Hologram});
-  background-repeat: repeat-x;
-  background-position: -180px -140px;
-  font-size: 70px;
-  text-align: center;
-  color: transparent;
-  background-clip: text;
-  /* animation:${BackgroundAnimated} 15s linear infinite; */
-
 `
 
 export const Header = () => {
   return (
     <>
-      <HeaderElement>
-        <H1Element>
-          Create CV
-        </H1Element>
-      </HeaderElement>
+      <HeaderFont />
+      <HeaderWrapper>
+        <h1>Create CV</h1>
+      </HeaderWrapper>
     </>
   )
 }

@@ -24,11 +24,7 @@ const beforeUpload = (file: FileType) => {
     return isJpgOrPng && isLt2M;
 };
 
-const CustomUploadWrapper = styled.div`
-    position: relative;
-    top: 20px;
-    left:100px;
-`
+
 export const CustomUpload: React.FC = () => {
     const [loading, setLoading] = useState(false);
     const [imageUrl, setImageUrl] = useState<string>();
@@ -50,25 +46,23 @@ export const CustomUpload: React.FC = () => {
     const uploadButton = (
         <button style={{ border: 0, background: 'none' }} type="button">
             {loading ? <LoadingOutlined /> : <PlusOutlined />}
-            <div style={{ marginTop: 8, color: 'white' }}>Choose your avatar</div>
+            <div style={{ marginTop: 8, color: '#424242', fontSize: '19px' }}>Выберите аватар</div>
         </button>
     );
 
     return (
         <>
-            <CustomUploadWrapper>
-                <Upload
-                    name="avatar"
-                    listType="picture-card"
-                    className="avatar-uploader"
-                    showUploadList={false}
-                    action="https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188"
-                    beforeUpload={beforeUpload}
-                    onChange={handleChange}
-                >
-                    {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}
-                </Upload>
-            </CustomUploadWrapper>
+            <Upload
+                name="avatar"
+                listType="picture-card"
+                className="avatar-uploader"
+                showUploadList={false}
+                action="https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188"
+                beforeUpload={beforeUpload}
+                onChange={handleChange}
+            >
+                {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}
+            </Upload>
         </>
     );
 };

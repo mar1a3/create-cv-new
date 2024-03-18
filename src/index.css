@@ -5,5 +5,8 @@
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  background: rgb(225, 223, 252);
+  background: linear-gradient(90deg, rgba(225, 223, 252, 1) 8%, rgba(213, 251, 247, 1) 81%);
 }
