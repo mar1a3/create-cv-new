@@ -1,19 +1,18 @@
 import React from 'react';
-import { styled } from 'styled-components';
-import { CustomCard } from '../Card/CustomCard';
-import { CustomInput } from '../Input/CustomInput';
-import { CustomCalendar } from '../Calendar/CustomCalendar';
-import { CustomUpload } from '../Upload/CustomUpload';
+import { MainCard } from '../Card/Card';
+import { UserInput } from '../Input/Input';
+import { UserCalendar } from '../Calendar/Calendar';
+import { UserUpload } from '../Upload/Upload';
 
 
 export const PersonalInfo = () => {
     return (
-        <CustomCard title="Персональная инфомация">
-        <CustomInput label="Фио" placeholder="Фио" />
-        <CustomInput label="Место жительства" placeholder="Место жительства" />
-        <CustomInput label="Номер телефона" placeholder="Номер телефона" />
-        <CustomCalendar title="Дата рождения" placeholder="Дата рождения"/>
-        <CustomUpload/>
-        </CustomCard>
+        <MainCard title="Персональная инфомация">
+            <UserInput label="Фио" placeholder="Фио" />
+            <UserInput label="Место жительства" placeholder="Место жительства" />
+            <UserInput label="Номер телефона" placeholder="Номер телефона" />
+            <UserCalendar title="Дата рождения" placeholder="Дата рождения" />
+            <UserUpload />
+        </MainCard>
     )
 }

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
 import { message, Upload } from 'antd';
 import type { GetProp, UploadProps } from 'antd';
-import styled from 'styled-components';
 
 type FileType = Parameters<GetProp<UploadProps, 'beforeUpload'>>[0];
 
@@ -25,7 +24,7 @@ const beforeUpload = (file: FileType) => {
 };
 
 
-export const CustomUpload: React.FC = () => {
+export const UserUpload: React.FC = () => {
     const [loading, setLoading] = useState(false);
     const [imageUrl, setImageUrl] = useState<string>();
 
@@ -35,7 +34,6 @@ export const CustomUpload: React.FC = () => {
             return;
         }
         if (info.file.status === 'done') {
-            // Get this url from response in real world.
             getBase64(info.file.originFileObj as FileType, (url) => {
                 setLoading(false);
                 setImageUrl(url);
