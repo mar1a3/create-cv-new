@@ -1,6 +1,6 @@
 import React from 'react';
 import type { DatePickerProps } from 'antd';
-import { DatePicker, Space } from 'antd';
+import { DatePicker } from 'antd';
 import {styled, createGlobalStyle} from 'styled-components';
 
 export const CardFont = createGlobalStyle`
