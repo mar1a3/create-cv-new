@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../components/Header/Header'
 import { PersonalInfo } from '../components/PersonalInfo/PersonalInfo';
 import { Education } from '../components/Education/Education';
+import { Skills } from '../components/Skills/Skills';
 
 export const MainPage = () => {
   return (
@@ -9,6 +10,7 @@ export const MainPage = () => {
       <Header />
       <PersonalInfo />
       <Education />
+      <Skills/>
     </>
   )
 }
