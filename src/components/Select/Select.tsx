@@ -2,18 +2,11 @@ import React from 'react';
 import { Select as AntdSelect, Space, SelectProps } from 'antd';
 import { SelectWraper } from './style';
 
-interface CustomSelectProps extends SelectProps<any> {
-  title: string;
-  defaultText?: string;
-  onChange?: (value: any) => void;
+export const Select: React.FC<SelectProps<any>> = ({ mode, options, title, defaultValue, placeholder, onChange }) => {
 
-}
-
-export const Select: React.FC<CustomSelectProps> = ({ mode, options, title, defaultText, placeholder, onChange }) => {
-
-  const handleSelectChange = (value: any) => {
+  const handleSelectChange = (value: any, option: any) => {
     if (onChange) {
-      onChange(value);
+      onChange(value, option);
     }
   }
 
@@ -24,7 +17,7 @@ export const Select: React.FC<CustomSelectProps> = ({ mode, options, title, defa
         <AntdSelect
           mode={mode}
           style={{ minWidth: '200px' }}
-          defaultValue={defaultText}
+          defaultValue={defaultValue}
           options={options}
           placeholder={placeholder}
           onChange={handleSelectChange}

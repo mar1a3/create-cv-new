@@ -13,7 +13,7 @@ export const Education = () => {
             </FormControl>
             <CalendarWidget title="Дата окончания" placeholder="Дата окончания" />
             <Select
-                defaultText="Бакалавр"
+                defaultValue="Бакалавр"
                 title="Степень"
                 options={[
                     { value: 'Бакалавр', label: 'Бакалавр' },

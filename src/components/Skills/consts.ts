@@ -1,4 +1,3 @@
-
 export const SkillsOptions= [
     { value: 'Vue', label: 'Vue' },
     { value: 'Typescript', label: 'Typescript' },

@@ -2,13 +2,13 @@ import React from 'react';
 import { InfoCard } from '../InfoCard/InfoCard';
 import { Select } from '../Select/Select';
 import { TagsWrapper, StyledTag } from './style';
-import { SkillsOptions } from './SkillsOptions';
+import { SkillsOptions } from './consts';
 
 
 export const Skills = () => {
     const [selectedTags, setSelectedTags] = React.useState<string[]>([]);
 
-    const handleSelectChange = (value: any) => {
+    const handleChangeSkills = (value: any) => {
         setSelectedTags(value);
     };
 
@@ -24,10 +24,9 @@ export const Skills = () => {
                 title="Навыки"
                 placeholder="Выберите навыки"
                 options={SkillsOptions}
-                onChange={handleSelectChange}
+                onChange={handleChangeSkills}
                 value={selectedTags}
-            >
-            </Select>
+            />
             <TagsWrapper>
                 {selectedTags.map((tag) => (
                     <StyledTag
