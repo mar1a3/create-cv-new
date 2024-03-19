@@ -5,7 +5,6 @@ import { Tag } from 'antd';
 export const TagsWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: 110px;
 `
 
 export const StyledTag = styled(Tag)`
