@@ -1,18 +1,18 @@
 import React from 'react';
-import { InfoCard } from '../Card/Card';
+import { InfoCard } from '../InfoCard/InfoCard';
 import { FormControl } from '../FormControl/FormControl';
-import { FormField } from '../Input/Input';
-import { CalendarWidget } from '../Calendar/Calendar';
-import { DataSelect } from '../Select/Select'
+import { InputField } from '../InputField/InputField';
+import { CalendarWidget } from '../CalendarWidget/CalendarWidget';
+import { SelectInfo } from '../SelectInfo/SelectInfo'
 
 export const Education = () => {
     return (
         <InfoCard title="Образование">
             <FormControl label="Учреждение">
-                <FormField label="Фио" placeholder="Фио" />
+                <InputField placeholder="Фио" />
             </FormControl>
             <CalendarWidget title="Дата окончания" placeholder="Дата окончания" />
-            <DataSelect
+            <SelectInfo
                 title="Степень"
                 options={[
                     { value: 'Бакалавр', label: 'Бакалавр' },

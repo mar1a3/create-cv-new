@@ -1,22 +1,21 @@
 import React from 'react';
-import { InfoCard } from '../Card/Card';
+import { InfoCard } from '../InfoCard/InfoCard';
 import { FormControl } from '../FormControl/FormControl';
-import { FormField } from '../Input/Input';
-import { CalendarWidget } from '../Calendar/Calendar';
-import { FileUploader } from '../Upload/Upload';
-
+import { InputField } from '../InputField/InputField';
+import { CalendarWidget } from '../CalendarWidget/CalendarWidget';
+import { FileUploader } from '../FileUploader/FileUploader';
 
 export const PersonalInfo = () => {
     return (
         <InfoCard title="Персональная инфомация">
             <FormControl label="Фио" >
-                <FormField label="Фио" placeholder="Фио" />
+                <InputField placeholder="Фио" />
             </FormControl>
             <FormControl label="Место жительства">
-                <FormField label="Место жительства" placeholder="Место жительства" />
+                <InputField placeholder="Место жительства" />
             </FormControl>
             <FormControl label="Номер телефона">
-                <FormField label="Фио" placeholder="Фио" />
+                <InputField placeholder="Фио" />
             </FormControl>
             <CalendarWidget title="Дата рождения" placeholder="Дата рождения" />
             <FileUploader />

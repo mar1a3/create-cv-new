@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Card } from 'antd';
 
-export { };
 export const CardWrapper = styled.div`
     display: flex;
     flex-direction:column;

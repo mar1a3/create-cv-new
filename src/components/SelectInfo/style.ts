@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export{};
-
-export const CalendarWrapper = styled.div`
+export const SelectWraper = styled.div`
     color:#424242;
     margin-bottom:30px;
     & p{

@@ -1,19 +1,13 @@
 import React from 'react';
-import type { DatePickerProps } from 'antd';
-import { DatePicker } from 'antd';
+import { DatePicker, DatePickerProps } from 'antd';
 import { CalendarWrapper } from './style';
 
-
-interface CalendarWidgetProps {
-    title?: string;
-    placeholder?: string;
-}
 
 const onChange: DatePickerProps['onChange'] = (date, dateString) => {
     console.log(date, dateString);
 };
 
-export const CalendarWidget: React.FC<CalendarWidgetProps> = ({ title, placeholder }) => (
+export const CalendarWidget: React.FC<DatePickerProps > = ({ title }) => (
     <>
         <CalendarWrapper>
             <p>{title}</p>

@@ -1,13 +1,9 @@
 import React from 'react';
-import { Input } from 'antd';
+import { Input, InputProps } from 'antd';
 import { Wrapper } from './style';
 
-interface FormFieldProps {
-    label: string;
-    placeholder: string;
-}
 
-export const FormField: React.FC<FormFieldProps> = ({ label, placeholder }) => {
+export const InputField: React.FC<InputProps> = ({placeholder }) => {
     return (
         <>
             <Wrapper>

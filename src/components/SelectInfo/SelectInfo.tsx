@@ -1,19 +1,9 @@
 import React from 'react';
 import { Select, Space } from 'antd';
 import { SelectWraper } from './style';
+import { SelectProps } from 'antd/es/select';
 
-interface SelectProps {
-  title?: string;
-  options: {
-    value: string; label: string;
-  }[];
-}
-
-const handleChange = (value: string) => {
-  console.log(`selected ${value}`);
-};
-
-export const DataSelect: React.FC<SelectProps> = ({ options, title }) => {
+export const SelectInfo: React.FC<SelectProps<any>> = ({ options, title }) => {
   return (
     <SelectWraper>
       <p>{title}</p>
@@ -21,7 +11,6 @@ export const DataSelect: React.FC<SelectProps> = ({ options, title }) => {
         <Select
           defaultValue="Степень"
           style={{ width: 120 }}
-          onChange={handleChange}
           options={options}
         />
       </Space>

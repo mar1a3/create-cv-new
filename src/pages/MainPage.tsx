@@ -8,7 +8,7 @@ export const MainPage = () => {
     <>
       <Header />
       <PersonalInfo />
-      <Education/>
+      <Education />
     </>
   )
 }
