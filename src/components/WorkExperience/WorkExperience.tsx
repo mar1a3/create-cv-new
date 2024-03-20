@@ -2,7 +2,7 @@ import React from 'react';
 import { InfoCard } from '../InfoCard/InfoCard';
 import { Input } from '../Input/Input';
 import { FormControl } from '../FormControl/FormControl';
-import { DatePicker } from '../DatePicker/DatePicker';
+import { DateRangePicker } from '../DateRangePicker/DatePicker';
 import { FlexibleTextArea } from '../FlexibleTextArea/FlexibleTextArea';
 import { Button } from '../Button/CustomButton';
 import { DeleteOutlined } from '@ant-design/icons';
@@ -35,7 +35,7 @@ export const WorkExperience = () => {
                         <Input placeholder="Должность" />
                     </FormControl>
                     <FormControl label="Период работы" >
-                        <DatePicker />
+                        <DateRangePicker />
                     </FormControl>
                     <FormControl label="Описание" >
                         <FlexibleTextArea />

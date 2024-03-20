@@ -4,7 +4,7 @@ import { RangePickerWrapper } from './style';
 
 const { RangePicker } = AntdDatePicker;
 
-export const DatePicker: React.FC = () => (
+export const DateRangePicker: React.FC = () => (
         <RangePickerWrapper>
         <RangePicker />
         </RangePickerWrapper>
