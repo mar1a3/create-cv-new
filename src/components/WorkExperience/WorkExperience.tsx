@@ -10,11 +10,12 @@ import { ParagraphWrapper } from './style';
 
 export const WorkExperience = () => {
     const [workBlocks, setWorkBlocks] = React.useState([{ id: 1 }]);
-    const addExperienceBlock = () => {
+
+    const handleAddExperienceBlock = () => {
         const newId = Math.random();
         setWorkBlocks([...workBlocks, { id: newId }])
     };
-    const removeExperienceBlock = (id: number) => {
+    const handleRemoveExperienceBlock = (id: number) => {
         const updatedBlocks = workBlocks.filter((block) => block.id !== id);
         setWorkBlocks(updatedBlocks);
     };
@@ -22,10 +23,10 @@ export const WorkExperience = () => {
     return (
         <InfoCard title="Опыт работы">
             {workBlocks.map((block, index) => (
-                <>
+                <React.Fragment key={block.id}>
                     <ParagraphWrapper>
-                        <p key={block.id}>Место работы - {index + 1}</p>
-                        {index > 0 && <DeleteOutlined className="delete-icon" onClick={() => removeExperienceBlock(block.id)} />}
+                        <p>Место работы - {index + 1}</p>
+                        {index > 0 && <DeleteOutlined className="delete-icon" onClick={() => handleRemoveExperienceBlock(block.id)} />}
                     </ParagraphWrapper>
                     <FormControl label="Компания" >
                         <Input placeholder="Компания" />
@@ -40,9 +41,9 @@ export const WorkExperience = () => {
                         <FlexibleTextArea />
                     </FormControl>
                     <FormControl label="" >
-                        <Button onClick={addExperienceBlock} />
+                        <Button onClick={handleAddExperienceBlock} />
                     </FormControl>
-                </>
+                </React.Fragment>
             ))}
         </InfoCard>
     )
