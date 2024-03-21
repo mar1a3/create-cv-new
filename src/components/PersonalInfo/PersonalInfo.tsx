@@ -1,22 +1,39 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import dayjs from 'dayjs';
 import { InfoCard } from '../InfoCard/InfoCard';
 import { FormControl } from '../FormControl/FormControl';
 import { Input } from '../Input/Input';
-import { CalendarWidget } from '../CalendarWidget/CalendarWidget';
+// import { CalendarWidget } from '../CalendarWidget/CalendarWidget';
+import { DatePicker } from 'antd';
 import { FileUploader } from '../FileUploader/FileUploader';
-import { setPersInfo } from '../../slices/personalInfoSlice';
+import { setPersInfo, setLocation, setPhone, setBirthday, setPhoto } from '../../slices/personalInfoSlice';
 import { RootState } from '../../store';
 
 export const PersonalInfo = () => {
     const dispatch = useDispatch();
-    const personalInfo = useSelector((state: RootState) => state.personalInf)
+    const personalInfo = useSelector((state: RootState) => state.personalInf);
 
     const handleFullNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const fullname = e.target.value;
         dispatch(setPersInfo(fullname))
-        console.log(dispatch(setPersInfo(fullname)))
     }
+    const handleLocationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const location = e.target.value;
+        dispatch(setLocation(location))
+    }
+    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const phone = e.target.value;
+        dispatch(setPhone(phone))
+    }
+
+    const handleChangeBirthday = (date: string) => {
+        const formattedDate = dayjs(date);
+        dispatch(setBirthday(formattedDate));
+    }
+    const handleChangeAvatar = (img: string) => {
+        dispatch(setPhoto(img));
+    };
 
     return (
         <InfoCard title="Персональная инфомация">
@@ -28,13 +45,34 @@ export const PersonalInfo = () => {
                 />
             </FormControl>
             <FormControl label="Место жительства">
-                <Input placeholder="Место жительства" />
+                <Input
+                    value={personalInfo.location}
+                    placeholder="Место жительства"
+                    onChange={handleLocationChange}
+                />
             </FormControl>
             <FormControl label="Номер телефона">
-                <Input placeholder="Фио" />
+                <Input
+                    value={personalInfo.phone}
+                    placeholder="Номер телефона"
+                    onChange={handlePhoneChange}
+                />
             </FormControl>
-            <CalendarWidget title="Дата рождения" placeholder="Дата рождения" />
-            <FileUploader />
+            {/* <CalendarWidget
+                title="Дата рождения"
+                placeholder="Дата рождения"
+                onChange={handleChangeBirthday}
+            /> */}
+            <FormControl label="Дата рождения">
+                <DatePicker
+                    onChange={handleChangeBirthday}
+                    placeholder='Дата рождения'
+                />
+            </FormControl>
+            <FileUploader
+                onChange={handleChangeAvatar}
+            />
         </InfoCard>
     )
 }
+
