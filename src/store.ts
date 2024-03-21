@@ -1,7 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
+import personalInfoReducer from './slices/personalInfoSlice';
 
 export const store = configureStore({
     reducer: {
+        personalInf: personalInfoReducer,
     }
 })
 
