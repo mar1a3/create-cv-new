@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { InfoCard } from '../InfoCard/InfoCard';
 import { Select } from '../Select/Select';
@@ -7,18 +8,20 @@ import { TagsWrapper, StyledTag } from './style';
 import { SkillsOptions } from './consts';
 
 
+import { addSkills, removeSkills } from '../../slices/skillsSlice';
+import { RootState } from '../../store';
+
+
 export const Skills = () => {
-    const [selectedTags, setSelectedTags] = React.useState<string[]>([]);
-
+    const dispatch = useDispatch();
+    const selectedTags = useSelector((state: RootState) => state.skills.skills);
     const handleChangeSkills = (value: any) => {
-        setSelectedTags(value);
-    };
-
+        dispatch(addSkills(value));
+    }
     const handleTagClose = (removedTag: string) => {
-        const newTags = selectedTags.filter((tag) => tag !== removedTag);
-        setSelectedTags(newTags);
-    };
-    console.log(selectedTags)
+        dispatch(removeSkills(removedTag));
+    }
+
     return (
         <InfoCard title="Навыки">
             <Select
@@ -30,7 +33,7 @@ export const Skills = () => {
                 value={selectedTags}
             />
             <TagsWrapper>
-                {selectedTags.map((tag) => (
+                {selectedTags.map((tag: string) => (
                     <StyledTag
                         key={tag}
                         onClose={() => handleTagClose(tag)}
