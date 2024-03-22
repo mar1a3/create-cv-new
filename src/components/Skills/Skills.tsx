@@ -14,7 +14,7 @@ import { RootState } from '../../store';
 
 export const Skills = () => {
     const dispatch = useDispatch();
-    const selectedTags = useSelector((state: RootState) => state.skills.skills);
+    const selectedSkills = useSelector((state: RootState) => state.skills.skills);
     const handleChangeSkills = (value: any) => {
         dispatch(addSkills(value));
     }
@@ -30,10 +30,10 @@ export const Skills = () => {
                 placeholder="Выберите навыки"
                 options={SkillsOptions}
                 onChange={handleChangeSkills}
-                value={selectedTags}
+                value={selectedSkills}
             />
             <TagsWrapper>
-                {selectedTags.map((tag: string) => (
+                {selectedSkills.map((tag: string) => (
                     <StyledTag
                         key={tag}
                         onClose={() => handleTagClose(tag)}
