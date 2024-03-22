@@ -4,7 +4,6 @@ import dayjs from 'dayjs';
 import { InfoCard } from '../InfoCard/InfoCard';
 import { FormControl } from '../FormControl/FormControl';
 import { Input } from '../Input/Input';
-// import { CalendarWidget } from '../CalendarWidget/CalendarWidget';
 import { DatePicker } from 'antd';
 import { FileUploader } from '../FileUploader/FileUploader';
 import { setPersInfo, setLocation, setPhone, setBirthday, setPhoto } from '../../slices/personalInfoSlice';
@@ -58,11 +57,6 @@ export const PersonalInfo = () => {
                     onChange={handlePhoneChange}
                 />
             </FormControl>
-            {/* <CalendarWidget
-                title="Дата рождения"
-                placeholder="Дата рождения"
-                onChange={handleChangeBirthday}
-            /> */}
             <FormControl label="Дата рождения">
                 <DatePicker
                     onChange={handleChangeBirthday}

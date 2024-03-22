@@ -12,7 +12,7 @@ interface PersonalInfoState {
 const initialState: PersonalInfoState = {
     fullname: '',
     location: '',
-    phone:'',
+    phone: '',
     birthday: null,
     photo: ''
 
@@ -25,26 +25,19 @@ export const personalInfoSlice = createSlice({
     reducers: {
         setPersInfo: (state, action: PayloadAction<string>) => {
             state.fullname = action.payload;
-            console.log(action)
         },
         setLocation: (state, action: PayloadAction<string>) => {
             state.location = action.payload;
-            console.log(action)
         },
         setPhone: (state, action: PayloadAction<string>) => {
             state.phone = action.payload;
-            console.log(action)
         },
         setBirthday: (state, action: PayloadAction<Dayjs>) => {
             state.birthday = action.payload;
-            console.log(action)
         },
         setPhoto: (state, action: PayloadAction<string>) => {
             state.photo = action.payload;
-            console.log(action)
         }
-        
-
     }
 })
 
