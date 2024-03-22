@@ -11,7 +11,7 @@ import { RootState } from '../../store';
 
 export const PersonalInfo = () => {
     const dispatch = useDispatch();
-    const personalInfo = useSelector((state: RootState) => state.personalInf);
+    const personalInfo = useSelector((state: RootState) => state.personalInfo);
 
     const handleFullNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const fullname = e.target.value;
