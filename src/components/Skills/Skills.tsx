@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { InfoCard } from '../InfoCard/InfoCard';
 import { Select } from '../Select/Select';
+
 import { TagsWrapper, StyledTag } from './style';
 import { SkillsOptions } from './consts';
 

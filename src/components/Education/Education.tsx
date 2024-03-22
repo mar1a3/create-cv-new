@@ -1,8 +1,10 @@
 import React from 'react';
+
+import { DatePicker } from 'antd';
+
 import { InfoCard } from '../InfoCard/InfoCard';
 import { FormControl } from '../FormControl/FormControl';
 import { Input } from '../Input/Input';
-import { DatePicker } from 'antd';
 import { Select } from '../Select/Select'
 
 export const Education = () => {

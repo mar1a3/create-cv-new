@@ -1,11 +1,14 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
+import { DatePicker } from 'antd';
 import dayjs from 'dayjs';
+
 import { InfoCard } from '../InfoCard/InfoCard';
 import { FormControl } from '../FormControl/FormControl';
 import { Input } from '../Input/Input';
-import { DatePicker } from 'antd';
 import { FileUploader } from '../FileUploader/FileUploader';
+
 import { setPersInfo, setLocation, setPhone, setBirthday, setPhoto } from '../../slices/personalInfoSlice';
 import { RootState } from '../../store';
 

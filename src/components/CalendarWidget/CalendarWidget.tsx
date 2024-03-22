@@ -7,7 +7,7 @@ const onChange: DatePickerProps['onChange'] = (date, dateString) => {
     console.log(date, dateString);
 };
 
-export const CalendarWidget: React.FC<DatePickerProps > = ({ title }) => (
+export const CalendarWidget: React.FC<DatePickerProps> = ({ title }) => (
     <>
         <CalendarWrapper>
             <p>{title}</p>
@@ -19,4 +19,3 @@ export const CalendarWidget: React.FC<DatePickerProps > = ({ title }) => (
         </CalendarWrapper>
     </>
 );
-
