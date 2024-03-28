@@ -17,7 +17,6 @@ const initialState: PersonalInfoState = {
     photo: ''
 
 }
-
 export const personalInfoSlice = createSlice({
     name: 'personalInfo',
     initialState,

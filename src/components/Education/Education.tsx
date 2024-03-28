@@ -39,10 +39,10 @@ export const Education = () => {
                     onChange={handleInstituteChange}
                 />
             </FormControl>
-            <FormControl label="Дата рождения">
+            <FormControl label="Дата окончания">
                 <DatePicker
                     onChange={handleChangeGraduate}
-                    placeholder='Дата рождения'
+                    placeholder='Дата окончания'
                 />
             </FormControl>
             <Select
