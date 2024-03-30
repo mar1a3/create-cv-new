@@ -47,27 +47,6 @@ export const experienceSlice = createSlice({
             ];
             return { ...state, experiences: newExperiences };
         },
-        
-        //     updateExperience: (state, action: PayloadAction<Experience>) => {
-        //         const { id, company, position } = action.payload;
-        //         const blockIndex = state.experiences.findIndex((block) => block.id === id);
-        //         if (blockIndex !== -1) {
-        //             state.experiences[blockIndex] = { id, company, position };
-        //         }
-        //     }
-        // }
-        //     updateExperience: (state, action: PayloadAction<{ id: number; company: string; position: string,
-        //         term: Dayjs | null, description: string  }>) => {
-        //         const { id, company, position, term, description } = action.payload;
-        //         const blockToUpdate = state.experiences.find((block) => block.id === id);
-        //         if (blockToUpdate) {
-        //             blockToUpdate.company = company;
-        //             blockToUpdate.position = position;
-        //             blockToUpdate.term = term;
-        //             blockToUpdate.description = description;
-        //         }
-        //     }
-        // }
     }
 })
 
