@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Button = styled.button`
+    position:absolute;
+    top:-70px;
+    left:500px;
+    width:100px;
+    height:50px;
+`
 export const ModalWrapper = styled.div`
     display: flex;
 `
