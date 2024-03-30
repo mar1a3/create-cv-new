@@ -10,10 +10,10 @@ import {Modal} from '../components/Modal/Modal';
 export const MainPage = () => {
   const [openModal, setOpenModal] = React.useState(false);
 
-  const openModalHandler = () =>{
+  const handleOpenModal  = () =>{
     setOpenModal(true);
   }
-  const closeModalHandler = () =>{
+  const handlecloseModal = () =>{
     setOpenModal(false);
   }
   return (
@@ -24,9 +24,9 @@ export const MainPage = () => {
       <Skills />
       <WorkExperience />
       <FloatButton
-      onClick={openModalHandler}
+      onClick={handleOpenModal}
       />
-      <Modal open={openModal} onCancel={closeModalHandler}/>
+      <Modal open={openModal} onCancel={handlecloseModal}/>
     </>
   )
 }

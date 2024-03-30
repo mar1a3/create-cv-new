@@ -20,7 +20,7 @@ const { RangePicker } = DatePicker;
 
 export const WorkExperience = () => {
     const dispatch = useDispatch();
-    const experience = useSelector((state: RootState) => state.experience.experiences)
+    const experiences = useSelector((state: RootState) => state.experience.experiences)
 
     const handleAddExperience = () => {
         dispatch(addExperience());
@@ -29,16 +29,16 @@ export const WorkExperience = () => {
         dispatch(removeExperience(id));
     };
     const handleInputChange = (id: number, field: string, value: string | null | [Dayjs | null, Dayjs | null]) => {
-        const currentBlock = experience.find(block => block.id === id);
+        const currentBlock = experiences.find(block => block.id === id);
         if (currentBlock) {
             const updatedBlock = { ...currentBlock, [field]: value };
-            dispatch(updateExperience({ currentBlock: updatedBlock, index: experience.indexOf(currentBlock) }));
+            dispatch(updateExperience({ currentBlock: updatedBlock, index: experiences.indexOf(currentBlock) }));
         }
     };
 
     return (
         <InfoCard title="Опыт работы">
-            {experience.map((block: any, index: number) => (
+            {experiences.map((block, index: number) => (
                 <React.Fragment key={block.id}>
                     <ParagraphWrapper>
                         <p>Место работы - {index + 1}</p>
